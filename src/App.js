@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react'
 import "./App.css";
 import background from "./images/pokemon.gif";
@@ -60,7 +61,7 @@ const App = () => {
       {pokemons.types.map((pokemon)=>(// Type est un objet constitué de plusieur index du coup on le map pour afficher chaque type 
          <li key={pokemon.type.name} className="list-group-item list-group-item-action list-group-item-dark d-flex justify-content-center">{capitalizeFirstLetter(pokemon.type.name)}</li>
          ))}
-      <a href="#" className="btn btn-outline-dark p-3 m-2 fs-4 text" onClick={()=>{randomNumber();changeBodyBackground();animation()} }>Show another random Pokemon</a> {/*Boutton pour randomiser la selection du Pokemon*/}
+      <button className="btn btn-outline-dark p-3 m-2 fs-4 text" onClick={()=>{randomNumber();changeBodyBackground();animation()} }>Show another random Pokemon</button> {/*Boutton pour randomiser la selection du Pokemon*/}
     </div>
     </div>
   )}
